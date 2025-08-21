@@ -1,0 +1,132 @@
+:root{
+
+--principal-preto: #000000;
+--tons-preto-medio: #191919;
+--tons-cinza-escuro2: #323131;
+--tons-cinza-escuro: #3F3F3F;
+--tons-cinza-claro: #B3B3B3;
+--principal-branco: #ffffff;
+--tons-azure-escuro: #162C51;
+--tons-azure-escuro2: #1C3967;
+--tons-azure-escuro3: #254C8A;
+--tons-azure-escuro4: #2F5FAD;
+--tons-azure: #3266B8;
+--tons-azure2: #3872CF;
+--principal-azure: #3E7FE6;
+--tons-azure-claro2: #C3D7F7;
+--tons-azure-claro3: #E2ECFB;
+--tons-azure-claro4: #ECF2FD;
+--tons-rosa-escuro: #510B25;
+--tons-rosa-escuro2: #670D30;
+--tons-rosa-escuro3: #8A1240;
+--tons-rosa-escuro4: #AD1750;
+--tons-rosa1: #B81855;
+--tons-rosa2: #CF1B5F;
+--principal-rosa: #E61E6A;
+--tons-rosa-claro2: #F7B9D1;
+--tons-rosa-claro3: #FBDDE9;
+--tons-rosa-claro4: #FDE9F0;
+--tons-vinho-escuro: #280513;
+--tons-vinho-escuro2: #340718;
+--tons-vinho-escuro3: #450920;
+--tons-vinho-escuro4: #560B28;
+--tons-vinho1: #5C0C3A;
+--tons-vinho2: #680E30;
+--principal-vinho: #730F35;
+--tons-vinho-claro2: #D4B5C0;         
+--tons-vinho-claro3: #EADBE1;
+--tons-vinho-claro4: #F1E7EB;
+--tons-azulCinza-escuro: #2F4152;
+--tons-azulCinza-escuro2: #3D546A;
+--tons-azulCinza-escuro3: #51708D;
+--tons-azulCinza-escuro4: #658CB0;
+--tons-azulCinza: #6C96BC;
+--tons-azulCinza2: #7AA8D4;
+--principal-azulCinza: #87BBEB;
+--tons-azulCinza-claro2: #DAEAF9;
+--tons-azulCinza-claro3: #EDF5FC;
+--tons-azulCinza-claro4: #F3F8FD;
+
+--borda: 2px solid var(--tons-cinza-escuro);
+--borda-arredondada: 15px;
+
+--tamanho-fonte-lg: 20px;
+--tamanho-fonte-md: 16px;
+--tamanho-fonte-sm: 14px;
+
+}
+
+@font-face {
+
+    font-family: Space_Grotesk;
+    src: url(../fonts/Space_Grotesk/static/SpaceGrotesk-Bold.ttf);
+    src: url(../fonts/Space_Grotesk/SpaceGrotesk-VariableFont_wght.ttf);
+    src: url(../fonts/Space_Grotesk/static/SpaceGrotesk-Light.ttf);
+    src: url(../fonts/Space_Grotesk/static/SpaceGrotesk-Medium.ttf);
+    src: url(../fonts/Space_Grotesk/static/SpaceGrotesk-Regular.ttf);
+    src: url(../fonts/Space_Grotesk/static/SpaceGrotesk-SemiBold.ttf);
+
+    font-family: Regular;
+    src: url(../fonts/Recursive/Recursive-VariableFont_CASL\,CRSV\,MONO\,slnt\,wght.ttf);
+    src: url(../fonts/Recursive/static/Recursive-Black.ttf);
+    src: url(../fonts/Recursive/static/Recursive-Bold.ttf);
+    src: url(../fonts/Recursive/static/Recursive-ExtraBold.ttf);
+    src: url(../fonts/Recursive/static/Recursive-Light.ttf);
+    src: url(../fonts/Recursive/static/Recursive-Medium.ttf);
+    src: url(../fonts/Recursive/static/Recursive-SemiBold.ttf);
+    src: url(../fonts/Recursive/static/Recursive_Casual-Regular.ttf);
+
+    font-family: Cal_Sans;
+    src: url(../fonts/Cal_Sans/CalSans-Regular.ttf);
+
+}
+
+
+
+*{
+
+font-family: "Cal_Sans";
+
+
+/* espaçamento */
+padding: 0 ;
+margin: 0 ;
+box-sizing: border-box;
+
+}
+
+
+
+
+
+/*----------------------------------------------------body----------------------------------------------------*/
+body{
+
+background-color: var(--cor-cinza-claro);
+
+}
+
+
+
+
+h1{
+
+    position: absolute; 
+    z-index: -1;
+    opacity: 0; 
+
+}
+
+
+
+/* formulario */
+
+
+imput{
+
+width: 100%;
+height: 35px;
+border: var(--borda);
+background-color: var(tons-cinza-claro);
+
+}

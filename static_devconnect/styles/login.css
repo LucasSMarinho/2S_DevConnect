@@ -1,0 +1,98 @@
+main 
+
+{
+
+    width: 100%;
+    min-height: 100vh; /* Altura da janela do dispositivo */
+    background-color: var(--tons-cinza-claro);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+main > div 
+
+{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 450px;
+    height: 700px;
+    background-color: var(--tons-cinza-escuro);
+
+}
+
+main > div > form 
+
+{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+/* formulario */
+
+#formulario
+
+{
+
+max-width: 450px ;
+height: 500px;
+
+}
+
+
+
+/* cadastro */
+#cadastro
+
+{
+
+height: 50px;
+display: flex;
+justify-content: space-around;
+align-items: center;
+
+}
+
+
+#cadastro,
+#formulario
+
+{
+
+width: 380px;
+border: var(--borda);    
+border-radius: var(--borda-arredondada);
+background-color: var(--principal-branco);
+
+
+}
+
+#informação-aplicativo 
+
+{
+
+font-size: var(--tamanho-fonte-sm);
+
+}
+
+/* instalação */
+
+#secao-instalacao
+
+{
+
+display: flex;
+justify-content: space-around;
+gap: 10px;
+flex-wrap: wrap;
+
+
+}
