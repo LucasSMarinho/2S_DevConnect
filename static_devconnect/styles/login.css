@@ -4,36 +4,37 @@ main
 
     width: 100%;
     min-height: 100vh; /* Altura da janela do dispositivo */
-    background-color: var(--tons-cinza-claro);
+    background: linear-gradient(0deg, var(--principal-azure) 0%, var(--principal-rosa) 100%);
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: nowrap;
 
 }
 
-main > div 
+main > div
 
 {
 
+    width: 90%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
-    width: 450px;
-    height: 700px;
-    background-color: var(--tons-cinza-escuro);
+    gap: 15px;
+
 
 }
 
-main > div > form 
+form 
 
 {
 
+    width: 90%;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
 
 }
+
 
 
 /* formulario */
@@ -42,38 +43,110 @@ main > div > form
 
 {
 
-max-width: 450px ;
-height: 500px;
+display: flex;
+flex-direction: column;
+justify-content: space-evenly;
+align-items: center;
+padding: 3%;
+gap: 15px;
 
 }
 
 
 
-/* cadastro */
-#cadastro
+#formulario > div 
 
 {
 
-height: 50px;
+width: 100%;
+display: flex;
+flex-direction: column;
+
+}
+
+#formulario > div > label
+
+{
+
+font-size: var(--tamanho-fonte-sm) ;
+color: var(--tons-cinza-escuro2) ;
+font-weight: 500;
+padding-bottom: 4px;
+
+}
+
+#formulario > div > input
+
+{
+
+height: 35px;
+
+}
+
+#formulario > p 
+
+{
+
+text-transform: uppercase;
+font-size: var(--tamanho-fonte-sm);
+color: var(--tons-cinza-claro);
+
+}
+
+#formulario > a, #secao-cadastro >  p > a
+
+{
+
+text-decoration: none;
+color: var(--principal-azure);
+
+}
+
+.formulario-botao-azul
+
+{
+
+    height: 35px;
+    width: 100%;  
+
+}
+
+/* cadastro */
+#seção-cadastro
+
+{
+
+height: 60px;
 display: flex;
 justify-content: space-around;
 align-items: center;
 
 }
 
+#seção-cadastro > p
 
-#cadastro,
+{
+
+font-size: var(--tamanho-fonte-md) ;
+
+}
+
+
+#seção-cadastro,
 #formulario
 
 {
 
-width: 380px;
+max-width: 350px ;        
+width: 100%;
 border: var(--borda);    
 border-radius: var(--borda-arredondada);
 background-color: var(--principal-branco);
 
 
 }
+
+
 
 #informação-aplicativo 
 
@@ -82,6 +155,8 @@ background-color: var(--principal-branco);
 font-size: var(--tamanho-fonte-sm);
 
 }
+
+
 
 /* instalação */
 
@@ -95,4 +170,11 @@ gap: 10px;
 flex-wrap: wrap;
 
 
+}
+
+#secao-instalacao img
+
+{
+    width: 120px;
+    height: 39px;
 }

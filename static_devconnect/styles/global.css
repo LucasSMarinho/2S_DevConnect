@@ -5,6 +5,7 @@
 --tons-cinza-escuro2: #323131;
 --tons-cinza-escuro: #3F3F3F;
 --tons-cinza-claro: #B3B3B3;
+--tons-cinza-claro2: #e3e3e3;
 --principal-branco: #ffffff;
 --tons-azure-escuro: #162C51;
 --tons-azure-escuro2: #1C3967;
@@ -47,7 +48,7 @@
 --tons-azulCinza-claro3: #EDF5FC;
 --tons-azulCinza-claro4: #F3F8FD;
 
---borda: 2px solid var(--tons-cinza-escuro);
+--borda: 1px solid var(--tons-cinza-escuro);
 --borda-arredondada: 15px;
 
 --tamanho-fonte-lg: 20px;
@@ -100,7 +101,9 @@ box-sizing: border-box;
 
 
 /*----------------------------------------------------body----------------------------------------------------*/
-body{
+body
+
+{
 
 background-color: var(--cor-cinza-claro);
 
@@ -109,7 +112,9 @@ background-color: var(--cor-cinza-claro);
 
 
 
-h1{
+h1 
+
+{
 
     position: absolute; 
     z-index: -1;
@@ -122,11 +127,50 @@ h1{
 /* formulario */
 
 
-imput{
+imput
+
+{
 
 width: 100%;
 height: 35px;
 border: var(--borda);
 background-color: var(tons-cinza-claro);
+
+}
+
+
+
+
+
+
+.formulario-botao-azul 
+
+{
+
+  
+background-color: var(--principal-azure);
+border: var(--borda);
+border-radius: var(--borda-arredondada);
+font-size: var(--tamanho-fonte-sm);
+font-weight: 550;
+
+}
+
+
+.formulario-botao-cinza
+
+{
+
+    background-color: var(--tons-cinza-claro2);
+    border: var(--borda); 
+    border-radius: var(--borda-arredondada);
+
+}
+
+input[type="file"]
+
+{
+
+    display: none;
 
 }

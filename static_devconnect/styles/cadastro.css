@@ -1,0 +1,166 @@
+main {
+
+    width: 100%;
+    min-height: 100vh;
+    /* Altura da janela do dispositivo */
+    background: linear-gradient(0deg, var(--principal-azure) 0%, var(--principal-rosa) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+
+}
+
+
+main>div {
+
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+
+
+}
+
+form > p
+
+{
+
+text-align: center;
+
+}
+
+
+form
+
+{
+
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+
+/* formulario */
+
+
+#formulario {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 3%;
+    gap: 20px;
+
+}
+
+#formulario > div 
+
+{
+
+width: 100%;
+display: flex;
+flex-direction: column;
+
+}
+
+
+#formulario > div > label
+
+{
+
+    font-size: var(--tamanho-fonte-sm) ;
+    color: var(--tons-cinza-escuro2) ;
+    font-weight: 500;
+    padding-bottom: 4px;
+
+}
+
+#formulario > div > input
+
+{
+
+height: 35px;
+
+}
+
+.formulario-imput-file
+
+{
+
+height: 35px;
+display: flex;
+justify-content: center;
+align-items: center;
+background-color: var(--tons-cinza-claro);
+color: var(--principal-preto);
+border: var(--borda);
+border-radius: var(--borda-arredondada);
+font-weight: 500;
+
+
+}
+
+#formulario > p 
+
+{
+
+display: flex;
+justify-content: center;
+font-size: var(--tamanho-fonte-sm);
+color: var(--tons-cinza-claro);
+
+}
+
+#formulario > a, #secao-login > p > a {
+
+    text-decoration: none;
+    color: var(--principal-azure);
+
+}
+
+.formulario-botao-azul
+
+{
+   
+    height: 35px;
+    width: 100%;  
+
+}  
+
+/* Login */
+
+
+#seção-login 
+
+{
+
+    height: 60px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+#seção-cadastro > p
+
+{
+
+font-size: var(--tamanho-fonte-sm) ;
+
+}
+
+
+#seção-login,
+#formulario {
+
+    max-width: 350px;
+    width: 100%;
+    border: var(--borda);
+    border-radius: var(--borda-arredondada);
+    background-color: var(--principal-branco);
+
+}
