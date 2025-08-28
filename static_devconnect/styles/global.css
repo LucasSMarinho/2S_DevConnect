@@ -1,59 +1,59 @@
-:root{
+:root {
 
---principal-preto: #000000;
---tons-preto-medio: #191919;
---tons-cinza-escuro2: #323131;
---tons-cinza-escuro: #3F3F3F;
---tons-cinza-claro: #B3B3B3;
---tons-cinza-claro2: #e3e3e3;
---principal-branco: #ffffff;
---tons-azure-escuro: #162C51;
---tons-azure-escuro2: #1C3967;
---tons-azure-escuro3: #254C8A;
---tons-azure-escuro4: #2F5FAD;
---tons-azure: #3266B8;
---tons-azure2: #3872CF;
---principal-azure: #3E7FE6;
---tons-azure-claro2: #C3D7F7;
---tons-azure-claro3: #E2ECFB;
---tons-azure-claro4: #ECF2FD;
---tons-rosa-escuro: #510B25;
---tons-rosa-escuro2: #670D30;
---tons-rosa-escuro3: #8A1240;
---tons-rosa-escuro4: #AD1750;
---tons-rosa1: #B81855;
---tons-rosa2: #CF1B5F;
---principal-rosa: #E61E6A;
---tons-rosa-claro2: #F7B9D1;
---tons-rosa-claro3: #FBDDE9;
---tons-rosa-claro4: #FDE9F0;
---tons-vinho-escuro: #280513;
---tons-vinho-escuro2: #340718;
---tons-vinho-escuro3: #450920;
---tons-vinho-escuro4: #560B28;
---tons-vinho1: #5C0C3A;
---tons-vinho2: #680E30;
---principal-vinho: #730F35;
---tons-vinho-claro2: #D4B5C0;         
---tons-vinho-claro3: #EADBE1;
---tons-vinho-claro4: #F1E7EB;
---tons-azulCinza-escuro: #2F4152;
---tons-azulCinza-escuro2: #3D546A;
---tons-azulCinza-escuro3: #51708D;
---tons-azulCinza-escuro4: #658CB0;
---tons-azulCinza: #6C96BC;
---tons-azulCinza2: #7AA8D4;
---principal-azulCinza: #87BBEB;
---tons-azulCinza-claro2: #DAEAF9;
---tons-azulCinza-claro3: #EDF5FC;
---tons-azulCinza-claro4: #F3F8FD;
+    --principal-preto: #000000;
+    --tons-preto-medio: #191919;
+    --tons-cinza-escuro2: #323131;
+    --tons-cinza-escuro: #3F3F3F;
+    --tons-cinza-claro: #B3B3B3;
+    --tons-cinza-claro2: #e3e3e3;
+    --principal-branco: #ffffff;
+    --tons-azure-escuro: #162C51;
+    --tons-azure-escuro2: #1C3967;
+    --tons-azure-escuro3: #254C8A;
+    --tons-azure-escuro4: #2F5FAD;
+    --tons-azure: #3266B8;
+    --tons-azure2: #3872CF;
+    --principal-azure: #3E7FE6;
+    --tons-azure-claro2: #C3D7F7;
+    --tons-azure-claro3: #E2ECFB;
+    --tons-azure-claro4: #ECF2FD;
+    --tons-rosa-escuro: #510B25;
+    --tons-rosa-escuro2: #670D30;
+    --tons-rosa-escuro3: #8A1240;
+    --tons-rosa-escuro4: #AD1750;
+    --tons-rosa1: #B81855;
+    --tons-rosa2: #CF1B5F;
+    --principal-rosa: #E61E6A;
+    --tons-rosa-claro2: #F7B9D1;
+    --tons-rosa-claro3: #FBDDE9;
+    --tons-rosa-claro4: #FDE9F0;
+    --tons-vinho-escuro: #280513;
+    --tons-vinho-escuro2: #340718;
+    --tons-vinho-escuro3: #450920;
+    --tons-vinho-escuro4: #560B28;
+    --tons-vinho1: #5C0C3A;
+    --tons-vinho2: #680E30;
+    --principal-vinho: #730F35;
+    --tons-vinho-claro2: #D4B5C0;
+    --tons-vinho-claro3: #EADBE1;
+    --tons-vinho-claro4: #F1E7EB;
+    --tons-azulCinza-escuro: #2F4152;
+    --tons-azulCinza-escuro2: #3D546A;
+    --tons-azulCinza-escuro3: #51708D;
+    --tons-azulCinza-escuro4: #658CB0;
+    --tons-azulCinza: #6C96BC;
+    --tons-azulCinza2: #7AA8D4;
+    --principal-azulCinza: #87BBEB;
+    --tons-azulCinza-claro2: #DAEAF9;
+    --tons-azulCinza-claro3: #EDF5FC;
+    --tons-azulCinza-claro4: #F3F8FD;
 
---borda: 1px solid var(--tons-cinza-escuro);
---borda-arredondada: 15px;
+    --borda: 1px solid var(--tons-cinza-escuro);
+    --borda-arredondada: 15px;
 
---tamanho-fonte-lg: 20px;
---tamanho-fonte-md: 16px;
---tamanho-fonte-sm: 14px;
+    --tamanho-fonte-lg: 20px;
+    --tamanho-fonte-md: 18px;
+    --tamanho-fonte-sm: 14px;
 
 }
 
@@ -84,15 +84,15 @@
 
 
 
-*{
+* {
 
-font-family: "Cal_Sans";
+    font-family: "Cal_Sans";
 
 
-/* espaçamento */
-padding: 0 ;
-margin: 0 ;
-box-sizing: border-box;
+    /* espaçamento */
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 
 }
 
@@ -101,24 +101,20 @@ box-sizing: border-box;
 
 
 /*----------------------------------------------------body----------------------------------------------------*/
-body
+body {
 
-{
-
-background-color: var(--cor-cinza-claro);
+    background-color: var(--cor-cinza-claro);
 
 }
 
 
 
 
-h1 
+h1 {
 
-{
-
-    position: absolute; 
+    position: absolute;
     z-index: -1;
-    opacity: 0; 
+    opacity: 0;
 
 }
 
@@ -127,14 +123,12 @@ h1
 /* formulario */
 
 
-imput
+imput {
 
-{
-
-width: 100%;
-height: 35px;
-border: var(--borda);
-background-color: var(tons-cinza-claro);
+    width: 100%;
+    height: 35px;
+    border: var(--borda);
+    background-color: var(tons-cinza-claro);
 
 }
 
@@ -143,48 +137,123 @@ background-color: var(tons-cinza-claro);
 
 
 
-.formulario-botao-azul 
+.formulario-botao-azul {
 
-{
 
-  
-background-color: var(--principal-azure);
-border: var(--borda);
-border-radius: var(--borda-arredondada);
-font-size: var(--tamanho-fonte-sm);
-font-weight: 550;
+    background-color: var(--principal-azure);
+    border: var(--borda);
+    border-radius: var(--borda-arredondada);
+    font-size: var(--tamanho-fonte-sm);
+    font-weight: 550;
 
 }
 
 
-.formulario-botao-cinza
-
-{
+.formulario-botao-cinza {
 
     background-color: var(--tons-cinza-claro2);
-    border: var(--borda); 
+    border: var(--borda);
     border-radius: var(--borda-arredondada);
 
 }
 
-input[type="file"]
-
-{
+input[type="file"] {
 
     display: none;
 
 }
 
+/* cabeçalho */
+
+#cabeçalho {
+
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 60px;
+    border-bottom: 5px solid transparent;
+    /*2*/
+    border-image: linear-gradient(to right, var(--principal-rosa), var(--principal-azure)) 1;
+    background-color: white;
 
 
-/* cabeçalho */ 
+}
 
-#cabeçalho
+#cabeçalho>nav {
 
-{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 85%;
+    max-width: 1440px;
 
 
+}
+
+.cabeçalho-ações {
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+}
+
+#foto-perfil {
+
+    width: 35px;
+    height: 35px;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 50%;
+
+}
+
+#foto-feed {
+
+    width: 45px;
+    height: 45px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+
+}
 
 
+.cabeçalho-ações>a {
+
+    display: flex;
+    align-items: center;
+
+}
+
+
+#logo-mobile {
+    display: none;
+}
+
+/* RESPONSIVO */
+
+@media only screen and (max-width:485px) {
+
+    #logo-mobile {
+
+        display: initial;
+
+    }
+
+    #logo-desktop {
+
+        display: none;
+
+    }
+
+}
+
+#seção-cadastro,
+#formulario {
+
+    width: 100%;
+    border-radius: var(--borda-arredondada);
+    background-color: white;
 
 }

@@ -1,0 +1,166 @@
+body {
+
+    background-color: var(--tons-cinza-claro);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+main {
+
+
+    margin-top: 15px;
+    width: 65%;
+
+    display: flex;
+    justify-content: center;
+
+}
+
+.container-flex-publi {
+
+    width: 80%;
+    max-width: 1000px;
+
+}
+
+.storys {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    gap: 30px;
+    overflow-x: scroll;
+
+
+}
+
+::-webkit-scrollbar {
+
+    display: none;
+
+}
+
+.cardstory>a {
+
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+
+}
+
+.cardstory>a>span {
+
+    color: black;
+    font-size: var(--tamanho-fonte-sm);
+    text-transform: lowercase;
+
+}
+
+
+
+.formulario-imput-file {
+
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--tons-cinza-claro);
+    color: var(--principal-preto);
+    border: var(--borda);
+    border-radius: var(--borda-arredondada);
+    font-weight: 500;
+
+
+}
+
+/* seção publi */
+
+
+.publicar {
+
+
+    margin-top: 10px;
+    gap: 30px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+
+}
+
+.publicar>h2 {
+
+    background-image: linear-gradient(var(--principal-rosa), var(--principal-azure));
+    color: transparent;
+    background-clip: text;
+
+}
+
+.publicar>form {
+
+    width: 100%;
+
+
+}
+
+.publicar>form>textarea 
+{
+
+    width: 100%;
+    height: 100px;
+    background-color: var(--tons-cinza-claro);
+    border-radius: var(--borda-arredondada);
+    resize: none;
+    padding: 10px;
+    font-size: var(--tamanho-fonte-md)
+
+}
+
+.publicar>div
+
+{
+
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: end;
+
+}
+
+.formulario-botao-azul
+
+{
+
+height: 35px;
+width: 30%;
+display: flex;
+justify-content: center;
+align-items: center;
+background-color: var(--principal-azure);
+color: var(--principal-preto);
+border: var(--borda);
+border-radius: var(--borda-arredondada);
+font-weight: 500;
+
+}
+
+.formulario-imput-file
+
+{
+
+height: 35px;
+width: 45%;
+display: flex;
+justify-content: center;
+align-items: center;
+background-color: var(--tons-cinza-claro);
+color: var(--principal-preto);
+border: var(--borda);
+border-radius: var(--borda-arredondada);
+font-weight: 500;
+
+}

@@ -138,11 +138,6 @@ font-size: var(--tamanho-fonte-md) ;
 {
 
 max-width: 350px ;        
-width: 100%;
-border: var(--borda);    
-border-radius: var(--borda-arredondada);
-background-color: var(--principal-branco);
-
 
 }
 
