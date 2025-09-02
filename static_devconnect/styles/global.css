@@ -66,27 +66,32 @@
     src: url(../fonts/Space_Grotesk/static/SpaceGrotesk-Medium.ttf);
     src: url(../fonts/Space_Grotesk/static/SpaceGrotesk-Regular.ttf);
     src: url(../fonts/Space_Grotesk/static/SpaceGrotesk-SemiBold.ttf);
+}
 
-    font-family: Regular;
-    src: url(../fonts/Recursive/Recursive-VariableFont_CASL\,CRSV\,MONO\,slnt\,wght.ttf);
+@font-face {
+
+    font-family: Recursive;
+
     src: url(../fonts/Recursive/static/Recursive-Black.ttf);
+    src: url(../fonts/Recursive/static/Recursive-SemiBold.ttf);
+    src: url(../fonts/Recursive/static/Recursive_Casual-Regular.ttf);
     src: url(../fonts/Recursive/static/Recursive-Bold.ttf);
+    src: url(../fonts/Recursive/Recursive-VariableFont_CASL\,CRSV\,MONO\,slnt\,wght.ttf);
     src: url(../fonts/Recursive/static/Recursive-ExtraBold.ttf);
     src: url(../fonts/Recursive/static/Recursive-Light.ttf);
     src: url(../fonts/Recursive/static/Recursive-Medium.ttf);
-    src: url(../fonts/Recursive/static/Recursive-SemiBold.ttf);
-    src: url(../fonts/Recursive/static/Recursive_Casual-Regular.ttf);
+}
+
+@font-face {
 
     font-family: Cal_Sans;
     src: url(../fonts/Cal_Sans/CalSans-Regular.ttf);
 
 }
 
-
-
 * {
 
-    font-family: "Cal_Sans";
+    font-family: Cal_Sans;
 
 
     /* espaçamento */
@@ -96,7 +101,13 @@
 
 }
 
+span {
 
+
+    font-family: Recursive;
+    font-weight: bold;
+
+}
 
 
 
@@ -123,12 +134,12 @@ h1 {
 /* formulario */
 
 
-imput {
+imput 
+
+{
 
     width: 100%;
     height: 35px;
-    border: var(--borda);
-    background-color: var(tons-cinza-claro);
 
 }
 
@@ -137,25 +148,49 @@ imput {
 
 
 
-.formulario-botao-azul {
+.formulario-botao-azul 
+
+{
 
 
     background-color: var(--principal-azure);
-    border: var(--borda);
     border-radius: var(--borda-arredondada);
+    border: none;
     font-size: var(--tamanho-fonte-sm);
     font-weight: 550;
 
 }
 
 
-.formulario-botao-cinza {
+.formulario-botao-cinza 
+
+{
 
     background-color: var(--tons-cinza-claro2);
-    border: var(--borda);
     border-radius: var(--borda-arredondada);
+    border: none;
+    padding: 5px;
 
 }
+
+.formulario-imput-file {
+
+    min-height: 35px;
+    max-width: 300px;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: var(--tons-cinza-claro);
+    color: var(--principal-preto);
+    border: none;
+    border-radius: var(--borda-arredondada);
+    font-weight: 500;
+
+
+}
+
 
 input[type="file"] {
 
@@ -198,25 +233,16 @@ input[type="file"] {
 
 }
 
-#foto-perfil {
+.foto-perfil {
 
-    width: 35px;
-    height: 35px;
+    width: 45px;
+    height: 45px;
     object-fit: cover;
     object-position: top;
     border-radius: 50%;
 
 }
 
-#foto-feed {
-
-    width: 45px;
-    height: 45px;
-    object-fit: cover;
-    object-position: center;
-    border-radius: 50%;
-
-}
 
 
 .cabeçalho-ações>a {
@@ -250,7 +276,8 @@ input[type="file"] {
 }
 
 #seção-cadastro,
-#formulario {
+#formulario
+{
 
     width: 100%;
     border-radius: var(--borda-arredondada);
