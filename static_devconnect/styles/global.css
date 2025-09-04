@@ -101,7 +101,9 @@
 
 }
 
-span {
+span 
+
+{
 
 
     font-family: Recursive;
@@ -233,7 +235,7 @@ input[type="file"] {
 
 }
 
-.foto-perfil {
+.foto-usuario {
 
     width: 45px;
     height: 45px;
@@ -270,6 +272,16 @@ input[type="file"] {
     #logo-desktop {
 
         display: none;
+
+    }
+
+}
+
+@media only screen and (max-width:770px) {
+
+    #mostrar-comentários {
+
+        width: 100%;
 
     }
 
