@@ -76,20 +76,6 @@ gap: 30px;
 
 }
 
-.foto-perfil
-
-{
-
-height: 100px;
-width: 100px;
-margin: 15px;
-
-object-fit: cover;
-object-position: left;
-border-radius: 50%;
-
-}
-
 .informações-usuario
 
 {
