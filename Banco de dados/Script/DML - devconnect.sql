@@ -1,4 +1,4 @@
-/* DQL - DATA MANIPULATION LANGUAGE */
+/* DML - DATA MANIPULATION LANGUAGE */
 
 --Para usar a database
 
@@ -59,17 +59,12 @@ SELECT * FROM tb_Seguidor
 
 --para deletar os registros
 
-DELETE FROM tb_Comentario
-WHERE id != 1;
-
-DELETE FROM tb_Curtida
-WHERE id != 3;
-
 SELECT * FROM tb_Curtida
 
+TRUNCATE TABLE tb_Curtida
 
 --Para atualizar registros
 
 UPDATE tb_Usuario
 SET email = 'RicardoSAmazing@gmail.com'
-WHERE id = 2;
+WHERE id = 1;
