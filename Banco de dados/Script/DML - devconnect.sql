@@ -55,7 +55,7 @@ VALUES
 (2, 1),
 (1, 2);
 
-SELECT * FROM tb_Seguidor
+SELECT * FROM tb_Usuario
 
 --para deletar os registros
 

@@ -1,229 +1,238 @@
+@using Microsoft.IdentityModel.Tokens
+@model List<MvcDevConnect.Models.TbPublicacao>;
+
 @{
     ViewData["Title"] = "Feed";
 }
 
+<link rel="stylesheet" href="~/css/feed.css">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <meta name="author" content="DevConnect - Lucas S">
-    <meta name="description" content="Site feito pela DevConnection para conectar os desenvolvedores">
-    <meta name="keywords"
-        content="Rede social, desenvolvedores, desenvolvimento, DevConnect, code, codigos, conexão, Dev, Developers">
-
-    <title>DevConnect - Feed</title>
-    <link rel="shortcut icon" href="../images/Logo tipo_ Dark.svg" type="image/x-icon">
-
-    <!-- CSS -->
+<script defer>
+    let novaPublicacaoCadastrada = "@ViewBag.PublicacaoCadastrada";
 
 
-    <link rel="stylesheet" href="~/css/global.css">
-    <link rel="stylesheet" href="~/css/feed.css">
+    if (novaPublicacaoCadastrada == "Nao Cadastrada") {
+        alert("Publicação não cadastrada! Tente novamente")
+    }
+    else if (novaPublicacaoCadastrada == "Cadastrada") {
+        alert("Publicação postada...")
+    }
 
-</head>
+</script>
 
 
-    <h1>Tela Feed</h1>
 
-    <header id="cabeçalho">
+<h1>Tela Feed</h1>
 
-        <nav>
+<header id="cabeçalho">
 
-            <a id="logo-desktop" href="./feed.html"> <img src="../images/Logo tipo_SemfundoMd.svg" alt=""> </a>
-            <a id="logo-mobile" href="./feed.html"> <img src="../images/Logo tipo_SemfundoSm.svg" alt=""> </a>
+    <nav>
 
-            <div class="cabeçalho-ações">
-                <a href="./feed.html"> <img src="../images/icone Casa (4).svg" alt=""> </a>
-                <a href="#"> <img src="../images/Search.svg" alt="logo DevConnect"> </a>
-                <a href="./perfil"> <img class="foto-usuario" src="../images/_image.webp" alt=""> </a>
-            </div>
+        <a id="logo-desktop" asp-controller="Home" asp-action="Index"> <img src="../images/Logo tipo_SemfundoMd.svg"
+                alt=""> </a>
+        <a id="logo-mobile" asp-controller="Home" asp-action="Index"> <img src="../images/Logo tipo_SemfundoSm.svg"
+                alt=""> </a>
+
+        <div class="cabeçalho-ações">
+            <a asp-controller="Feed" asp-action="Index"> <img src="../images/icone Casa (4).svg" alt=""> </a>
+            <a href="#"> <img src="../images/Search.svg" alt="logo DevConnect"> </a>
+            <a asp-controller="Usuario" asp-action="Perfil"> <img class="foto-usuario" src="../images/_image.webp"
+                    alt=""> </a>
+        </div>
+
+    </nav>
+
+</header>
+
+<main>
+
+    <div class="container-flex-publi">
+
+        <nav class="storys" id="formulario" enctype="multipart/form-data" method="post" asp-controller="Feed"
+            asp-action="Index">
+
+            <article class="cardstory">
+                <a href="#"> <img class="foto-usuario" src="../images/transferir.jpg" alt=""> <span>Calango_</span>
+                </a>
+            </article>
+
+            <article class="cardstory">
+                <a href="#"> <img class="foto-usuario" src="../images/transferir (1).jpg" alt="">
+                    <span>zerao@official</span> </a>
+            </article>
+
+            <article class="cardstory">
+                <a href="#"> <img class="foto-usuario" src="../images/transferir (2).jpg" alt="">
+                    <span>GaLaXY</span>
+                </a>
+            </article>
+
+            <article class="cardstory">
+                <a href="#"> <img class="foto-usuario" src="../images/channels4_profile.jpg" alt="">
+                    <span>Alanzoka_Nextstage</span> </a>
+            </article>
+
+            <article class="cardstory">
+                <a href="#"> <img class="foto-usuario"
+                        src="../images/29668a42-6969-48c5-9f67-467681b5720a-profile_image-300x300.png" alt="">
+                    <span>CappucinoMafios0</span> </a>
+            </article>
+
+            <article class="cardstory">
+                <a href="#"> <img class="foto-usuario" src="~/images/images (1).jpg" alt=""> <span>MrFall_</span>
+                </a>
+            </article>
+
+
+
+            <article class="cardstory">
+                <a href="#"> <img class="foto-usuario" src="~/images/transferir.jpg" alt=""> <span>Calango_</span>
+                </a>
+            </article>
+
+            <article class="cardstory">
+                <a href="#"> <img class="foto-usuario" src="~/images/transferir (1).jpg" alt="">
+                    <span>zerao@official</span> </a>
+            </article>
+
+            <article class="cardstory">
+                <a href="#"> <img class="foto-usuario" src="~/images/transferir (2).jpg" alt="">
+                    <span>GaLaXY</span>
+                </a>
+            </article>
+
+            <article class="cardstory">
+                <a href="#"> <img class="foto-usuario" src="~/images/channels4_profile.jpg" alt="">
+                    <span>Alanzoka_Nextstage</span> </a>
+            </article>
+
+            <article class="cardstory">
+                <a href="#"> <img class="foto-usuario"
+                        src="~/images/29668a42-6969-48c5-9f67-467681b5720a-profile_image-300x300.png" alt="">
+                    <span>CappucinoMafios0</span> </a>
+            </article>
+
+            <article class="cardstory">
+                <a href="#"> <img class="foto-usuario" src="~/images/images (1).jpg" alt=""> <span>MrFall_</span>
+                </a>
+            </article>
+
 
         </nav>
 
-    </header>
+        <Section class="publicar" id="formulario">
 
-    <main>
+            <h2>publicar</h2>
 
-        <div class="container-flex-publi">
+            <form enctype="multipart/form-data" method="post" asp-controller="Feed" asp-action="Index">
+                <textarea name="Descricao" id="escrever-texto" placeholder="Digite a descrição do post..."
+                    required></textarea>
 
-            <nav class="storys" id="formulario">
 
-                <article class="cardstory">
-                    <a href="#"> <img class="foto-usuario" src="../images/transferir.jpg" alt=""> <span>Calango_</span>
-                    </a>
-                </article>
+                <footer>
 
-                <article class="cardstory">
-                    <a href="#"> <img class="foto-usuario" src="../images/transferir (1).jpg" alt="">
-                        <span>zerao@official</span> </a>
-                </article>
+                    <label class="formulario-imput-file" for="upload-imagem">Faça o upload da sua imagem
+                        aqui</label>
+                    <input type="file" name="imagem" id="upload-imagem">
 
-                <article class="cardstory">
-                    <a href="#"> <img class="foto-usuario" src="../images/transferir (2).jpg" alt="">
-                        <span>GaLaXY</span>
-                    </a>
-                </article>
+                    <button type="submit" class="formulario-botao-azul">Postar</button>
 
-                <article class="cardstory">
-                    <a href="#"> <img class="foto-usuario" src="../images/channels4_profile.jpg" alt="">
-                        <span>Alanzoka_Nextstage</span> </a>
-                </article>
+                </footer>
 
-                <article class="cardstory">
-                    <a href="#"> <img class="foto-usuario"
-                            src="../images/29668a42-6969-48c5-9f67-467681b5720a-profile_image-300x300.png" alt="">
-                        <span>CappucinoMafios0</span> </a>
-                </article>
+            </form>
 
-                <article class="cardstory">
-                    <a href="#"> <img class="foto-usuario" src="../images/images (1).jpg" alt=""> <span>MrFall_</span>
-                    </a>
-                </article>
+        </Section>
 
 
+        <section>
 
-                <article class="cardstory">
-                    <a href="#"> <img class="foto-usuario" src="../images/transferir.jpg" alt=""> <span>Calango_</span>
-                    </a>
-                </article>
+            @foreach (TbPublicacao publi in Model)
+            {
+                if (!publi.ImagemUrl.IsNullOrEmpty())
+                {
+                    <article class="posts" id="formulario">
 
-                <article class="cardstory">
-                    <a href="#"> <img class="foto-usuario" src="../images/transferir (1).jpg" alt="">
-                        <span>zerao@official</span> </a>
-                </article>
+                        <header class="cardpost">
 
-                <article class="cardstory">
-                    <a href="#"> <img class="foto-usuario" src="../images/transferir (2).jpg" alt="">
-                        <span>GaLaXY</span>
-                    </a>
-                </article>
+                            <a href="#"> <img class="foto-usuario" src="~/images/@publi.IdUsuarioNavigation?.FotoPerfilUrl" alt="">
 
-                <article class="cardstory">
-                    <a href="#"> <img class="foto-usuario" src="../images/channels4_profile.jpg" alt="">
-                        <span>Alanzoka_Nextstage</span> </a>
-                </article>
+                                <span>@publi.IdUsuarioNavigation?.NomeDeUsuario</span>
 
-                <article class="cardstory">
-                    <a href="#"> <img class="foto-usuario"
-                            src="../images/29668a42-6969-48c5-9f67-467681b5720a-profile_image-300x300.png" alt="">
-                        <span>CappucinoMafios0</span> </a>
-                </article>
+                            </a>
 
-                <article class="cardstory">
-                    <a href="#"> <img class="foto-usuario" src="../images/images (1).jpg" alt=""> <span>MrFall_</span>
-                    </a>
-                </article>
+                        </header>
 
+                        <figure>
 
-            </nav>
+                            <img src="~/images/@publi.ImagemUrl" alt="post_calango">
 
-            <Section class="publicar" id="formulario">
+                            <figcaption class="descrição-publicação">
 
-                <h2>publicar</h2>
 
-                <form>
-                    <textarea name="" id="escrever-texto" placeholder="Digite a descrição do post..."></textarea>
+                                <div class="interações-posts">
 
+                                    <span>156k Curtidas</span>
 
-                    <footer>
+                                    <button> <img class="post-ações" src="../images/icone Heart (4).svg"
+                                            alt="icone-Heart"></button>
+                                    <button> <img class="post-ações" src="../images/icone-Comentário (1).svg"
+                                            alt="icone icone-Comentário"> </button>
 
-                        <label class="formulario-imput-file" for="upload-imagem">Faça o upload da sua imagem
-                            aqui</label>
-                        <input type="file" name="" id="upload-imagem">
+                                </div>
 
-                        <button type="submit" class="formulario-botao-azul">Postar</button>
+                                <p>@publi.Descricao</p>
 
-                    </footer>
 
-                </form>
+                                <button> ver todos os comentários... </button>
+                            </figcaption>
 
-            </Section>
+                        </figure>
 
+                    </article>
+                }
+                else
+                {
+                    <article class="posts" id="formulario">
 
+                        <header class="cardpost">
 
-            <article class="posts" id="formulario">
+                             <a href="#"> <img class="foto-usuario" src="~/images/@publi.IdUsuarioNavigation?.FotoPerfilUrl" alt="">
 
-                <header class="cardpost">
+                                <span>@publi.IdUsuarioNavigation?.NomeDeUsuario</span>
 
-                    <a href="#"> <img class="foto-usuario" src="../images/channels4_profile.jpg" alt="">
+                            </a>
 
-                        <span>Alanzoka_Nextstage</span>
+                        </header>
 
-                    </a>
+                        <figure>
 
-                </header>
+                            <figcaption class="descrição-publicação">
 
-                <figure>
 
-                    <img src="../images/images (2).jpg" alt="post_calango">
+                                <div class="interações-posts">
 
-                    <figcaption class="descrição-publicação">
+                                    <span>156k Curtidas</span>
 
-                        
-                        <div class="interações-posts">
-                            
-                            <span>156k Curtidas</span>
-                            
-                            <button> <img class="post-ações" src="../images/icone Heart (4).svg"
-                                    alt="icone-Heart"></button>
-                            <button> <img class="post-ações" src="../images/icone-Comentário (1).svg"
-                                    alt="icone icone-Comentário"> </button>
+                                    <button> <img class="post-ações" src="../images/icone Heart (4).svg"
+                                            alt="icone-Heart"></button>
+                                    <button> <img class="post-ações" src="../images/icone-Comentário (1).svg"
+                                            alt="icone icone-Comentário"> </button>
 
-                        </div>
+                                </div>
 
-                        <p>Participando do campeonato mundial de Rocket League venha ver a live!!</p>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione odio quos dolorum provident ut, excepturi sequi tenetur ad dolorem molestias numquam, obcaecati laboriosam. Natus atque nobis eveniet. Magnam, harum architecto!</p>
+                                <p>@publi.Descricao</p>
 
-                        <button> ver todos os comentários... </button>
 
-                    </figcaption>
+                                <button> ver todos os comentários... </button>
+                            </figcaption>
 
-                </figure>
+                        </figure>
 
-            </article>   
+                    </article>
+                }
+            }
 
-            <article class="posts" id="formulario">
+        </section>
 
-                <header class="cardpost">
-
-                    <a href="#"> <img class="foto-usuario" src="../images/transferir.jpg" alt="">
-
-                        <span>Calango_</span>
-
-                    </a>
-
-                </header>
-
-                <figure>
-
-                    <img src="../images/40650214173-offset-28862-preview-480x272.jpg" alt="post_alanzoka">
-
-                    <figcaption class="descrição-publicação">
-
-                        
-                        <div class="interações-posts">
-                            
-                            <span>156k Curtidas</span>
-
-                            <button> <img class="post-ações" src="../images/icone Heart (4).svg"
-                                    alt="icone-Heart"></button>
-                            <button> <img class="post-ações" src="../images/icone-Comentário (1).svg"
-                                    alt="icone icone-Comentário"> </button>
-
-                        </div>
-
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione odio quos dolorum provident ut, excepturi sequi tenetur ad dolorem molestias numquam, obcaecati laboriosam. Natus atque nobis eveniet. Magnam, harum architecto! Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia maiores, in vero, odio possimus rerum sunt quam repellendus porro eos cumque cum, ducimus voluptates magni cupiditate doloribus accusantium quaerat alias.</p>
-
-                        <button id="mostrar-comentários"> ver todos os comentários... </button>
-
-                    </figcaption>
-
-                </figure>
-            </article>
-
-        </div>
-    </main>
+    </div>
+</main>

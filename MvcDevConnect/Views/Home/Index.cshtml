@@ -1,6 +1,14 @@
-﻿@{
-    ViewData["Title"] = "Login";
+﻿@model MvcDevConnect.Models.TbUsuario
+
+<script defer>
+const UsuarioNovoCadastrado = "@ViewBag.UsuarioNovoCadastrado";
+
+if(UsuarioNovoCadastrado == "Cadastrado")
+{
+    alert("Usuário cadastrado! Parabens")
 }
+
+</script>
 
 <head>
     <meta charset="UTF-8">
@@ -11,7 +19,7 @@
     <meta name="keywords" content="Rede social, desenvolvedores, desenvolvimento, DevConnect, code, codigos, conexão, Dev, Developers">
 
     <title>DevConnect - Login</title>
-    <link rel="shortcut icon" href="../images/Logo tipo_ Dark.svg" type="image/x-icon">
+    <link rel="shortcut icon" href="~/images/Logo tipo_ Dark.svg" type="image/x-icon">
     <!-- CSS -->
 
     <link rel="stylesheet" href="~/css/global.css">
@@ -26,7 +34,7 @@
         <!-- Formulário -->
           <form id="formulario">
 
-            <img src="../images/Logo tipo_ Light SM.svg" alt="Logo-DevConnection">
+            <img src="~/images/Logo tipo_ Light SM.svg" alt="Logo-DevConnection">
 
 
 
@@ -53,22 +61,20 @@
         <!-- seção cadastro -->
           <section id="seção-cadastro">
 
-            <p> Não tem uma conta? <a href="usuario"> Cadastre-se </a></p>
-
+            <p> Não tem uma conta? <a asp-controller="Usuario" asp-action="Index"> Cadastre-se </a></p>
+            
           </section>
 
 
-
-
-          <p id="informação-aplicativo">obtenha o app</p>
+          <p id="informação-aplicativo"> obtenha o app </p>
         <!-- seção instalação -->
 
 
           <section id="secao-instalacao">
             
-            <img src="../images/app-store.svg" alt="app apple store">
+            <img src="~/images/app-store.svg" alt="app apple store">
             
-            <img src="../images/google-play.svg"" alt="app google-play">
+            <img src="~/images/google-play.svg"" alt="app google-play">
 
           </section>
 

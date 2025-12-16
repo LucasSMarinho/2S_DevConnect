@@ -73,3 +73,5 @@ CREATE TABLE tb_Seguidor(                                   --tabela intermediar
 
 ALTER TABLE Tb_Curtida
 ADD UNIQUE( id_Usuario, id_Publicacao)
+
+

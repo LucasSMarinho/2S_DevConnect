@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="DevConnect - Lucas S">
+    <meta name="description" content="Site feito pela DevConnection para conectar os desenvolvedores">
+    <meta name="keywords"
+        content="Rede social, desenvolvedores, desenvolvimento, DevConnect, code, codigos, conexão, Dev, Developers">
+
+    <title>DevConnect - Edição de perfil</title>
+    <link rel="shortcut icon" href="~/images/Logo tipo_ Dark.svg" type="image/x-icon">
+
+    <!-- CSS -->
+
+
+    <link rel="stylesheet" href="~/css/global.css">
+    <link rel="stylesheet" href="~/css/editordeperfil.css">
+
+</head>
+
+
+    <h1>tela editar perfil</h1>
+
+<header id="cabeçalho">
+
+    <nav>
+
+        <a id="logo-desktop" asp-controller="Home" asp-action="Index"> <img src="../images/Logo tipo_SemfundoMd.svg"
+                alt=""> </a>
+        <a id="logo-mobile" asp-controller="Home" asp-action="Index"> <img src="../images/Logo tipo_SemfundoSm.svg"
+                alt=""> </a>
+
+        <div class="cabeçalho-ações">
+            <a asp-controller="Feed" asp-action="Index"> <img src="../images/icone Casa (4).svg" alt=""> </a>
+            <a href="#"> <img src="../images/Search.svg" alt="logo DevConnect"> </a>
+            <a asp-controller="Usuario" asp-action="Perfil"> <img class="foto-usuario" src="../images/_image.webp"
+                    alt=""> </a>
+        </div>
+
+    </nav>
+
+</header>
+
+<main>
+
+
+    <div class="container-flex-editordeperfil">
+
+        <aside>
+
+            <a href="">Configurações</a>
+            <a asp-action="Index" asp-controller="Home">Sair</a>
+
+        </aside>
+
+        <section id="formulario">
+
+            <div class="container-fotoperfil">
+
+                <img class="foto-perfil" src="../images/_image.webp" alt="usuario">
+
+                <div class="trocar-fotoperfil">
+
+                    <label class="button-trocarperfil" for="upload-imagem">
+
+
+                        <span>trocar foto de perfil</span>
+                        <img src="~/images/camera-icon.png">
+
+                    </label>
+                    <input type="file" id="upload-imagem">
+                    <p>BRKsEDU_</p>
+ 
+                </div>
+
+                
+            </div>
+
+            <div class="trocar-info">
+
+                <p>Nome de usuario:</p>
+                <input type="text" class="formulario-botao-cinza" placeholder="BRKsEDU_">
+            </div>
+
+            <div class="trocar-info">
+
+                <p>Nome real:</p>
+                <input type="text" class="formulario-botao-cinza" placeholder="Eduardo Pugliese">
+
+            </div>
+
+            <div class="trocar-info">
+
+                <p>Email:</p>
+                <input type="text" class="formulario-botao-cinza" placeholder="Email">
+
+            </div>
+
+            <button type="submit" class="formulario-botao-azul">Alterar</button>
+
+        </section>
+
+
+    </div>
+
+</main>
+
+</html>
